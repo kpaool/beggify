@@ -9,6 +9,9 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts(){
+    let data = {
+      "txn":"login"
+    };
     return this.http.get('https://dummyjson.com/products');
   }
 }

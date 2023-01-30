@@ -19,9 +19,12 @@ export class HomeComponent implements OnInit {
 
 
   getProducts() {
-    this.ProductApiService.getProducts().subscribe((response:any) => {
-      this.products = response.products;
-      console.log(response.products);
-    });
+    JSON.parse(localStorage.getItem("cartitem")!);
+    setTimeout(()=>{
+      this.ProductApiService.getProducts().subscribe((response:any) => {
+        this.products = response.products;
+        console.log(response.products);
+      });
+    },1000);
   }
 }
