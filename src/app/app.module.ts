@@ -16,6 +16,7 @@ import { PaymentsComponent } from './components/market/payments/payments.compone
 import { ProfileComponent } from './components/auth/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     CartComponent,
     HomeComponent,
     PaymentsComponent,
-    ProfileComponent
+    ProfileComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
